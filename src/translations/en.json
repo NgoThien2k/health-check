@@ -1,4 +1,15 @@
 {
+    "homeheader":{
+        "specialty":"Medical specialty",
+        "searchdoctor":"Find doctor",
+        "heal-facility":"Health facilities",
+        "choose-room":"Choose hospital clinic",
+        "doctor":"Doctor",
+        "select-doctor":"Choose a doctor",
+        "fee":"Medical examination package",
+        "check-heal":"General physical examination",
+        "support":"Support"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",

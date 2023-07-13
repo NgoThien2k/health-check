@@ -8,8 +8,17 @@
         "select-doctor":"Chọn bác sĩ giỏi",
         "fee":"Gói khám",
         "check-heal":"Khám sức khỏe tổng quát",
-        "support":"Hỗ trợ"
-
+        "support":"Hỗ trợ",
+        "search":"Tìm kiếm"
+    },
+    "banner":{
+        "title1":"NỀN TẢNG Y TẾ",
+        "title2":"CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
+        "child1":"KHÁM CHUYÊN KHOA",
+        "child2":"KHÁM TỔNG QUÁT",
+        "child3":"Xét Nghiệm Y Học",
+        "child4":"Sức khỏe tinh thần",
+        "child5":"Khám Nha Khoa"
     },
 
     "common": {

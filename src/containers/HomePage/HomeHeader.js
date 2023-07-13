@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './HomeHeader.scss';
-
+import {LANGUAGES} from '../../utils/constant';
+import {changeLanguageApp} from '../../store/actions'
 class Header extends Component {
+
+    changeLanguage = (language)=>{
+        this.props.changeLanguageAppRedux(language)
+        //fire redux event: actions
+
+    }
     render() {
         return (
             <React.Fragment>
@@ -35,18 +42,22 @@ class Header extends Component {
                             <div className='support'><i className="fas fa-question-circle"></i>
                                 <FormattedMessage id={"homeheader.support"}></FormattedMessage>
                             </div>
-                            <div className='languege-vi'>VN</div>
-                            <div className='languege-en'>EN</div>
+                            <div className='languege-vi'><span onClick={()=>{this.changeLanguage(LANGUAGES.VI)}}>VN </span></div>
+                            <div className='languege-en'><span onClick={()=>{this.changeLanguage(LANGUAGES.EN)}}>EN</span></div>
                         </div>
                     </div>
                 </div>
                 <div className='home-header-banner'>
                     <div className='content-up'>
-                        <div className='title1'>NỀN TẢNG Y TẾ</div>
-                        <div className='title2'>CHĂM SÓC SỨC KHỎE TOÀN DIỆN</div>
+                        <div className='title1'>
+                            <FormattedMessage id={"banner.title1"}></FormattedMessage>
+                        </div>
+                        <div className='title2'>
+                            <FormattedMessage id={"banner.title2"}></FormattedMessage>
+                        </div>
                         <div className='search'>
                             <i className="fas fa-search"></i>
-                            <input type='text' placeholder='Tìm kiếm'></input>
+                            <input type='text' placeholder="Tìm kiếm"></input>
                         </div>
                     </div>
                     <div className='content-down'>
@@ -56,7 +67,7 @@ class Header extends Component {
                                     <i className="fas fa-hospital-alt"></i>
                                 </div>
                                 <div className='text-child'>
-                                    Khám Chuyên Khoa
+                                    <FormattedMessage id={"banner.child1"}></FormattedMessage>
                                 </div>
                             </div>
                             <div className='option-child'>
@@ -64,7 +75,7 @@ class Header extends Component {
                                     <i class="fas fa-stethoscope"></i>
                                 </div>
                                 <div className='text-child'>
-                                    Khám Tổng Quát
+                                    <FormattedMessage id={"banner.child2"}></FormattedMessage>
                                 </div>
                                 
                             </div>
@@ -73,7 +84,7 @@ class Header extends Component {
                                     <i class="fas fa-procedures"></i>
                                 </div>
                                 <div className='text-child'>
-                                    Xét Nghiệm Y Học
+                                <FormattedMessage id={"banner.child3"}></FormattedMessage>
                                 </div>
                             </div>
                             <div className='option-child'>
@@ -81,7 +92,7 @@ class Header extends Component {
                                     <i class="fas fa-syringe"></i>
                                 </div>
                                 <div className='text-child'>
-                                    Sức khỏe tinh thần
+                                    <FormattedMessage id={"banner.child4"}></FormattedMessage>
                                 </div>
                                 
                             </div>
@@ -90,7 +101,7 @@ class Header extends Component {
                                     <i class="fas fa-flask"></i>
                                 </div>
                                 <div className='text-child'>
-                                    Khám Nha Khoa
+                                    <FormattedMessage id={"banner.child5"}></FormattedMessage>
                                 </div>
                                 
                             </div>
@@ -114,6 +125,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        changeLanguageAppRedux:(language)=>{dispatch(changeLanguageApp(language))}
     };
 };
 

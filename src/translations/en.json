@@ -8,7 +8,17 @@
         "select-doctor":"Choose a doctor",
         "fee":"Medical examination package",
         "check-heal":"General physical examination",
-        "support":"Support"
+        "support":"Support",
+        "search":"Search"
+    },
+    "banner":{
+        "title1":"MEDICAL FOUNDATION",
+        "title2":"HOLISTIC HEALTH CARE",
+        "child1":"SPECIALIST EXAMINATION",
+        "child2":"GENERAL EXAMINATION",
+        "child3":"MEDICAL TESTS",
+        "child4":"MENTAL HEALTH",
+        "child5":"DENTAL EXAMINATION"
     },
     "common": {
         "add": "Add",

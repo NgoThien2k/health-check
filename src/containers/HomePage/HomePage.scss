@@ -1,83 +1,142 @@
-// .section-specialty{
-//     height: 330px;
-//     background: #d7d7d7;
-//     margin: 0 100px;
-//     .specialty-container{
-//         margin: 0 50px;
-//         display: flex;
-//         flex-direction: column;
-//         .specialty-header{
+.slick-prev{
+    left: -30px !important;
+    z-index: 100;
+    height: 48px !important;
+    width: 44px !important;
+    background: #fff !important;
+    &:hover{
+        background: #d7d7d7 !important;
+    }
+}
+.slick-prev::before{
+    font-family: 'Glyphicons Halflings' !important;
+    color: purple !important;
+}
+.slick-next{
+    left: 1390px;
+    z-index: 100;
+    right: 0 !important;
+    height: 48px !important;
+    width: 44px !important;
+    background: white !important;
+    &:hover{
+        background: #d7d7d7 !important;
+    }
+}
+.slick-next::before{
+    font-family: 'Glyphicons Halflings' !important;
+    color: purple !important;
+}
 
-//             height: 60px;
-//             margin-bottom: 20px;
-//             padding-top: 20px;
-//             .title-section{
-//                 font-size: 22px;
-//                 font-weight: 600;
-//             }
-//             .btn-section{
-//                 float: right;
-//                 display: block;
-//                 padding: 10px 15px;
-//                 border:  none;
-//                 outline: none;
-//                 background-color: #ebebeb;
-//                 color: black;
-//                 cursor: pointer;
-//                 text-transform: uppercase;
-//                 &:hover{
-//                     color: #fff;
-//                     background: yellow;
-//                 }
-//             }
-//         }
-//         .specialty-body{
-//             .specicalty-customize{
-//                 .bg-image{
-//                     width: 278px;
-//                     height: 160px;
-//                     background: url('../../../assets/specialty/chuyenkhoa.jpg');
-//                     background-color: #eee;
-//                     background-position: center center;
-//                     background-repeat: no-repeat;
-//                     background-size: cover;
 
-//                     &.section-specialty{
-//                         background: url('../../../assets/medical/kham-tim-mach.jpg');
-//                     }
-//                 }
-//             }
 
-//             .slick-prev{
-//                 left: -30px !important;
-//                 z-index: 100;
-//                 height: 48px !important;
-//                 width: 44px !important;
-//                 background: #fff;
-//                 &:hover{
-//                     background: #d7d7d7 !important;
-//                 }
-//             }
-//             .slick-prev::before{
-//                 font-family: 'Glyphicons Halflings' !important;
-//                 color: purple !important;
-//             }
-//             .slick-next{
-//                 left: 1190px;
-//                 z-index: 100;
-//                 right: 0 !important;
-//                 height: 48px !important;
-//                 width: 44px !important;
-//                 background: #fff;
-//                 &:hover{
-//                     background: #d7d7d7 !important;
-//                 }
-//             }
-//             .slick-next::before{
-//                 font-family: 'Glyphicons Halflings' !important;
-//                 color: purple !important;
-//             }
-//         }
-//     }
-  
-// }
+.section-share{
+    .specialty-body{
+        .section-customize{
+            .outer-bg{
+                border: 1px solid;
+                margin: 5px;
+                padding: 15px;
+            }
+            .bg-image{
+                width: 278px;
+                height: 160px;
+                background: url('../../assets/specialty/chuyenkhoa.jpg');
+                background-color: #eee;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                &.section-outstanding{
+                    background-image: url('../../assets/outstanding/Avatartrang.jpg');
+                    width: 120px;
+                    height: 120px;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+                    border-radius: 50%;
+                }
+                &.section-handbook{
+                    background-image: url('../../assets/handbook/camnang.png');
+                }
+               
+            }
+            
+        }
+    }
+}
+
+
+.section-share{
+    &.section-outstanding{
+        background: yellow;
+
+    }
+    &.section-specialty{
+        background: #d7d7d7;
+    }
+    &.section-about{
+        border: 1px solid red;
+        height: 500px !important;
+    }
+    height: 330px;
+    
+    margin: 0 100px;
+    .specialty-container{
+        margin: 0 50px;
+        display: flex;
+        flex-direction: column;
+        .specialty-header{
+
+            height: 60px;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            .title-section{
+                font-size: 22px;
+                font-weight: 600;
+            }
+            .btn-section{
+                float: right;
+                display: block;
+                padding: 10px 15px;
+                border:  none;
+                outline: none;
+                background-color: #ebebeb;
+                color: black;
+                cursor: pointer;
+                text-transform: uppercase;
+                &:hover{
+                    color: #fff;
+                    background: yellow;
+                }
+            }
+        }
+      
+    }
+    
+}
+.home-footer{
+    text-align: center;
+    width: auto;
+    height: 100px;
+    padding-top: 10px;
+    a{
+        text-decoration: unset;
+    }
+}
+.section-about{
+    padding: 0 100px;
+    .section-about-header{
+        padding: 20px 10px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .section-about-content{
+        display: flex;
+        gap: 15px;
+        .content-left{
+            width: 40%;
+        }
+        .content-right{
+            width: 60%;
+        }
+    }
+}

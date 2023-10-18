@@ -1,58 +1,53 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './Specialty.scss';
 import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import SpecialtyImg from "../../../assets/specialty/chuyenkhoa.jpg"
-
+import SpecialtyImg from "../../../assets/specialty/chuyenkhoa.jpg";
+import {LANGUAGES} from '../../../utils/constant';
+import { FormattedMessage } from 'react-intl';
+import {changeLanguageApp} from '../../../store/actions';
 
 class Specialty extends Component {
+    changeLanguage = (language)=>{
+        this.props.changeLanguageAppRedux(language)
+        //fire redux event: actions
 
+    }
     render() {
-        let settings={
-            dot: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow:4,
-            slidesToScroll:1,
-        };
         return (
-            <div className='section-specialty'>
+            <div className='section-share section-specialty'>
                 <div className='specialty-container'>
                     <div className='specialty-header'>
-                        <span className='title-section'>Chuyên khoa phổ biến</span>
-                        <button className='btn-section'>Xem thêm</button>
+                        <span className='title-section'><FormattedMessage id="specialty.baner"/></span>
+                        <button className='btn-section'><FormattedMessage id="specialty.more"/></button>
                     </div>
                     <div className='specialty-body'> 
-                        <Slider {...settings}>
-                            <div className='specicalty-customize'>
+                        <Slider {...this.props.settings}>
+                            <div className='section-customize'>
                                 <div className='bg-image'/>
-                                <div>Cơ xương khớp</div>
+                                <div><FormattedMessage id="specialty.musculoskeletal"/></div>
                             </div>
-                            <div className='specicalty-customize'>
+                            <div className='section-customize'>
                                 <div className='bg-image'/>
-                                <div>Cơ xương khớp2</div>
+                                <div><FormattedMessage id="specialty.musculoskeletal"/></div>
                             </div>
-                            <div className='specicalty-customize'>
+                            <div className='section-customize'>
                                 <div className='bg-image'/>
-                                <div>Cơ xương khớp 3</div>
+                                <div><FormattedMessage id="specialty.musculoskeletal"/></div>
                             </div>
-                            <div className='specicalty-customize'>
+                            <div className='section-customize'>
                                 <div className='bg-image'/>
-                                <div>Cơ xương khớp 4</div>
+                                <div><FormattedMessage id="specialty.musculoskeletal"/></div>
                             </div>
-                            <div className='specicalty-customize'>
+                            <div className='section-customize'>
                                 <div className='bg-image'/>
-                                <div>Cơ xương khớp 5</div>
+                                <div><FormattedMessage id="specialty.musculoskeletal"/></div>
                             </div>
-                            <div className='specicalty-customize'>
+                            <div className='section-customize'>
                                 <div className='bg-image' src={SpecialtyImg}/>
-                                <div>Cơ xương khớp 6</div>
+                                <div><FormattedMessage id="specialty.musculoskeletal"/></div>
                             </div>
                         </Slider>
                     </div>
-                    
                 </div>
             </div>
         );
@@ -64,12 +59,13 @@ const mapStateToProps = state => {
     return {
         isLoggedIn: state.user.isLoggedIn,
         language: state.app.language,
+        
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        
+        changeLanguageAppRedux:(language)=>{dispatch(changeLanguageApp(language))}
     };
 };
 

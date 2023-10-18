@@ -44,35 +44,35 @@
                 }
             }
 
-            .slick-prev{
-                left: -30px !important;
-                z-index: 100;
-                height: 48px !important;
-                width: 44px !important;
-                background: #fff;
-                &:hover{
-                    background: #d7d7d7 !important;
-                }
-            }
-            .slick-prev::before{
-                font-family: 'Glyphicons Halflings' !important;
-                color: purple !important;
-            }
-            .slick-next{
-                left: 1190px;
-                z-index: 100;
-                right: 0 !important;
-                height: 48px !important;
-                width: 44px !important;
-                background: #fff;
-                &:hover{
-                    background: #d7d7d7 !important;
-                }
-            }
-            .slick-next::before{
-                font-family: 'Glyphicons Halflings' !important;
-                color: purple !important;
-            }
+            // .slick-prev{
+            //     left: -30px !important;
+            //     z-index: 100;
+            //     height: 48px !important;
+            //     width: 44px !important;
+            //     background: #fff;
+            //     &:hover{
+            //         background: #d7d7d7 !important;
+            //     }
+            // }
+            // .slick-prev::before{
+            //     font-family: 'Glyphicons Halflings' !important;
+            //     color: purple !important;
+            // }
+            // .slick-next{
+            //     left: 1190px;
+            //     z-index: 100;
+            //     right: 0 !important;
+            //     height: 48px !important;
+            //     width: 44px !important;
+            //     background: #fff;
+            //     &:hover{
+            //         background: #d7d7d7 !important;
+            //     }
+            // }
+            // .slick-next::before{
+            //     font-family: 'Glyphicons Halflings' !important;
+            //     color: purple !important;
+            // }
         }
     }
   
